@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "Ivanna Shchokalo <ivanka.m78@gmail.com>",
   "type": "module",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server",
     "start": "node src/server"
