@@ -56,10 +56,7 @@ export const getAnimals = async (req, res) => {
 
   const [totalItems, animals] = await Promise.all([
     animalsQuery.clone().countDocuments(),
-    animalsQuery
-      // .sort({ createdAt: -1 }) // нові тваринки будуть першими
-      .skip(skip)
-      .limit(perPage),
+    animalsQuery.skip(skip).limit(perPage),
   ]);
 
   const totalPages = Math.ceil(totalItems / perPage);

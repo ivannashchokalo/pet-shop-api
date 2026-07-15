@@ -26,10 +26,6 @@ export async function removeFromFavorites(req, res) {
 
   user.favorites = user.favorites.filter((id) => id.toString() !== animalId);
 
-  //req.json() робить з ObjectId рядок, коли відправляє на фронтенд
-  // id з бази -  ObjectId
-  //animalId - рядок
-
   await user.save();
 
   res.status(200).json({
@@ -49,7 +45,7 @@ export async function getFavoriteAnimals(req, res) {
   const user = await User.findById(req.user._id);
 
   const animals = await Animal.find({
-    _id: { $in: user.favorites }, // $in - знайди всі Animal, де _id входить у масив favorites. Аналогічно тукому animalsQuery.where("_id").in(user.favorites);
+    _id: { $in: user.favorites },
   });
 
   res.status(200).json(animals);
@@ -76,7 +72,7 @@ export async function getUserRequests(req, res) {
 
   const requests = await Request.find({
     _id: { $in: user.requests },
-  }).populate("animalId"); // у обєкті айді поверта.ться дані тваринки
+  }).populate("animalId");
 
   res.status(200).json(requests);
 }

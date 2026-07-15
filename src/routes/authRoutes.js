@@ -34,7 +34,7 @@ router.post(
 router.post("/reset-password", celebrate(resetPasswordSchema), resetPassword);
 
 //============ both ===================
-router.post("/logout", authenticate, logout);
+router.post("/logout", logout);
 router.post("/refresh", refreshUserSession);
 router.get("/me", authenticate, getMe);
 
