@@ -19,6 +19,13 @@ export const favoriteBodySchema = {
   }),
 };
 
+export const favoriteAnimalsQuerySchema = {
+  [Segments.QUERY]: Joi.object({
+    page: Joi.number().integer().min(1).default(1),
+    perPage: Joi.number().integer().min(1).default(10),
+  }),
+};
+
 export const changePasswordSchema = {
   [Segments.BODY]: Joi.object({
     oldPassword: Joi.string().required().messages({

@@ -42,13 +42,29 @@ export async function getFavorites(req, res) {
 }
 
 export async function getFavoriteAnimals(req, res) {
+  const { page = 1, perPage = 10 } = req.query;
+  const skip = (page - 1) * perPage;
+
   const user = await User.findById(req.user._id);
 
-  const animals = await Animal.find({
+  const animalsQuery = Animal.find({
     _id: { $in: user.favorites },
   });
 
-  res.status(200).json(animals);
+  const [totalItems, animals] = await Promise.all([
+    animalsQuery.clone().countDocuments(),
+    animalsQuery.skip(skip).limit(perPage),
+  ]);
+
+  const totalPages = Math.ceil(totalItems / perPage);
+
+  res.status(200).json({
+    page,
+    perPage,
+    totalItems,
+    totalPages,
+    animals,
+  });
 }
 
 export async function clearFavorites(req, res) {

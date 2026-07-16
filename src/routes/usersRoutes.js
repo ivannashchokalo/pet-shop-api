@@ -15,6 +15,7 @@ import { celebrate } from "celebrate";
 import {
   changeNameSchema,
   changePasswordSchema,
+  favoriteAnimalsQuerySchema,
   favoriteBodySchema,
   RequestIdParamSchema,
 } from "../validations/usersValidation.js";
@@ -34,7 +35,12 @@ router.delete(
   authenticate,
   removeFromFavorites,
 );
-router.get("/favorites/animals", authenticate, getFavoriteAnimals);
+router.get(
+  "/favorites/animals",
+  authenticate,
+  celebrate(favoriteAnimalsQuerySchema),
+  getFavoriteAnimals,
+);
 router.delete("/favorites/animals", authenticate, clearFavorites);
 router.get("/requests", authenticate, getUserRequests);
 router.delete(
