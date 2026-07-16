@@ -17,13 +17,15 @@ import statisticsRoutes from "./routes/statisticsRoutes.js";
 const PORT = process.env.PORT ?? 3000;
 const CLIENT_URL = process.env.CLIENT;
 const ADMIN_URL = process.env.ADMIN;
+const CLIENT_URL_LOCAL = process.env.CLIENT_LOCAL;
+const ADMIN_URL_LOCAL = process.env.ADMIN_LOCAL;
 const app = express();
 
 app.use(logger);
 app.use(express.json());
 app.use(
   cors({
-    origin: [CLIENT_URL, ADMIN_URL],
+    origin: [CLIENT_URL, ADMIN_URL, CLIENT_URL_LOCAL, ADMIN_URL_LOCAL],
     credentials: true,
   }),
 );
