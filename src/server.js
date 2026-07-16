@@ -15,8 +15,8 @@ import { logger } from "./middleware/logger.js";
 import statisticsRoutes from "./routes/statisticsRoutes.js";
 
 const PORT = process.env.PORT ?? 3000;
-const CLIENT_URL = process.env.CLIENT_URL;
-const ADMIN_URL = process.env.ADMIN_URL;
+const CLIENT_URL = process.env.CLIENT;
+const ADMIN_URL = process.env.ADMIN;
 const app = express();
 
 app.use(logger);
