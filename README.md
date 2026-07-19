@@ -334,15 +334,17 @@ npm start
 ---
 
 
-## 🌐 Deployment
+## 🚀 Deployment
 
-The API is deployed on **Render**.
+- ⚙️ **Backend API**  
+  https://pet-shop-api-tmbd.onrender.com
 
-**Base URL**
+- 👑 **Admin Panel**  
+  https://pet-shop-admin-taupe.vercel.app
 
-```text
-https://pet-shop-api-tmbd.onrender.com
-```
+- 🌐 **Client App**  
+  https://pet-shop-client-five.vercel.app
+
 
 ---
 
