@@ -3,7 +3,6 @@
 REST API for a pet adoption platform built with **Node.js**, **Express**, **MongoDB**, and **Mongoose**.
 
 This backend powers two independent frontend applications.
-
 ```text
                   🐾 Pet Shop API
                         │
@@ -19,8 +18,6 @@ This backend powers two independent frontend applications.
 
 ## 🔗 Related Repositories
 
-## 🔗 Related Repositories
-
 - 🌐 [Pet Shop Client](https://github.com/ivannashchokalo/pet-shop-client)
 
 - 👑 [Pet Shop Admin Panel](https://github.com/ivannashchokalo/pet-shop-admin)
@@ -29,7 +26,7 @@ This backend powers two independent frontend applications.
 
 > ⚠️ **Important**
 >
-> The Client and Admin Dashboard share the same authentication cookies.
+> The Client and Admin Panel share the same authentication cookies.
 > When testing both applications at the same time, use different browser windows (Incognito or another browser) to avoid cookie conflicts.
 
 ---
@@ -177,7 +174,7 @@ JWT is used only for password recovery.
 
 # 📊 Statistics
 
-The API provides summary statistics for the **Admin Dashboard**, including:
+The API provides summary statistics for the **Admin Panel**, including:
 
 - 🐶 Animals by category
 - 📦 Available animals
@@ -337,6 +334,18 @@ npm start
 ---
 
 
+## 🌐 Deployment
+
+The API is deployed on **Render**.
+
+**Base URL**
+
+```text
+https://pet-shop-api-tmbd.onrender.com
+
+---
+
+
 # 🚀 API Endpoints
 
 ## 🔐 Authentication
@@ -403,3 +412,14 @@ DELETE /requests/:reqId
 ```http
 GET /statistics
 ```
+
+---
+
+
+## 👩‍💻 Author
+
+**Ivanna Shchokalo**  
+Junior Full-Stack Developer
+
+- 💼 LinkedIn: https://linkedin.com/in/ivannashchokalo
+- 🌐 GitHub: https://github.com/ivannashchokalo
