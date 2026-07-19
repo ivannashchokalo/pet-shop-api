@@ -125,7 +125,7 @@ JWT is used only for password recovery.
 
 ---
 
-# ❤️ Favorites
+## ❤️ Favorites
 
 - ❤️ Favorite animals are stored as **Animal ObjectIds** in the **User** document.
 - 🆔 The API provides separate endpoints for favorite IDs and paginated favorite animals.
@@ -134,7 +134,7 @@ JWT is used only for password recovery.
 ---
 
 
-# 📩 Reservation requests
+## 📩 Reservation requests
 
 - 🌐 Guests can reserve animals without creating an account.
 - 👤 Registered users can view and manage their reservation requests.
@@ -142,7 +142,7 @@ JWT is used only for password recovery.
 
 ---
 
-# 🖼 Image Upload
+## 🖼 Image Upload
 
 - ☁️ Images are uploaded directly to **Cloudinary**.
 - 🚀 Images are uploaded using Multer Memory Storage.
@@ -151,7 +151,7 @@ JWT is used only for password recovery.
 
 ---
 
-# 🔎 Search, Filtering & Sorting
+## 🔎 Search, Filtering & Sorting
 
 - 🔍 Search animals
 - 🐶 Filter by animal type
@@ -163,7 +163,7 @@ JWT is used only for password recovery.
 
 ---
 
-# 📧 Password Recovery
+## 📧 Password Recovery
 
 - 📧 Password reset via email
 - 🎟 Secure JWT reset tokens
@@ -172,7 +172,7 @@ JWT is used only for password recovery.
 
 ---
 
-# 📊 Statistics
+## 📊 Statistics
 
 The API provides summary statistics for the **Admin Panel**, including:
 
@@ -182,7 +182,7 @@ The API provides summary statistics for the **Admin Panel**, including:
 
 ---
 
-# ✅ Validation
+## ✅ Validation
 
 - 📝 Request body validation
 - 🔍 Query parameter validation
@@ -192,7 +192,7 @@ The API provides summary statistics for the **Admin Panel**, including:
 
 ---
 
-# ⚠️ Error Handling
+## ⚠️ Error Handling
 
 - ⚠ Centralized error handling
 - 🚫 Consistent HTTP error responses
@@ -244,7 +244,7 @@ The API provides summary statistics for the **Admin Panel**, including:
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 .
@@ -267,7 +267,7 @@ The API provides summary statistics for the **Admin Panel**, including:
 
 ---
 
-# 🛡 Security
+## 🛡 Security
 
 - 🍪 HTTP-only cookies
 - 🔒 Secure cookies
@@ -277,7 +277,7 @@ The API provides summary statistics for the **Admin Panel**, including:
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
 ### 📋 Prerequisites
 
@@ -342,9 +342,9 @@ The API is deployed on **Render**.
 
 ```text
 https://pet-shop-api-tmbd.onrender.com
+```
 
 ---
-
 
 # 🚀 API Endpoints
 
