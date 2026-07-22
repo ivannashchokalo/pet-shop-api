@@ -17,6 +17,8 @@ export const getAnimals = async (req, res) => {
     search,
   } = req.query;
 
+  console.log(11111, req.query);
+
   const skip = (page - 1) * perPage;
 
   const animalsQuery = Animal.find();

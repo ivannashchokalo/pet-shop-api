@@ -13,6 +13,30 @@ export const statisticsController = async (req, res) => {
 
   const happyOwnersCount = await Request.countDocuments({ status: "closed" });
 
+  const reservedCount = await Animal.countDocuments({
+    status: "reserved",
+  });
+  const soldCount = await Animal.countDocuments({
+    status: "sold",
+  });
+  const availableDogsCount = await Animal.countDocuments({
+    type: "dog",
+    status: "available",
+  });
+  const availableCatsCount = await Animal.countDocuments({
+    type: "cat",
+    status: "available",
+  });
+  const availableBirdsCount = await Animal.countDocuments({
+    type: "bird",
+    status: "available",
+  });
+
+  const availableRodentsCount = await Animal.countDocuments({
+    type: "rodent",
+    status: "available",
+  });
+
   res.status(200).json({
     dogsCount,
     catsCount,
@@ -20,5 +44,12 @@ export const statisticsController = async (req, res) => {
     rodentsCount,
     animalsAvailableCount,
     happyOwnersCount,
+
+    availableDogsCount,
+    availableCatsCount,
+    availableBirdsCount,
+    availableRodentsCount,
+    reservedCount,
+    soldCount,
   });
 };
